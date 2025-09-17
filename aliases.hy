@@ -30,4 +30,4 @@
   (setv (get data "local_part") needed-alias)
   (setv response (requests.post URL :auth AUTH :json data :headers HEADERS))
   (when (!= (. response status_code) 200)
-    (print (.json response))))
+    (print needed-alias)))
